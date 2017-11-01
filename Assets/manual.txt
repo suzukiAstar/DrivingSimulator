@@ -1,0 +1,18 @@
+TopSpeedの調整
+	hieralchyのFrontCar(PlayerCar)を選択
+	CarControllerコンポーネントのTopspeedを変更
+
+AccelとBrakeの調整
+ ・PlayerCaR
+	CarUserControlスクリプトを開く
+	FixedUpdate関数の中の、float vが上下入力
+	ここに補正を加えることでアクセル・ブレーキを調整
+ ・FrontCar
+	FrontCarControlスクリプトを開く
+	StartBraking関数が呼び出され、Invokeで2秒後にブレーキ中止
+	ブレーキを長くしたければここをいじる
+	※ブレーキが長すぎると減速しすぎてバックしだすので注意。要調整
+	
+	アクセルは常時１、ブレーキ時に-0.5調整をしている
+	ここをいじればブレーキの度合いや加速が調整可能。
+
